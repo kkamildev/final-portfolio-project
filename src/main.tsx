@@ -1,10 +1,16 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter } from 'react-router-dom';
+import Navbar from './nav/Navbar';
+
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+  <HelmetProvider>
+    <BrowserRouter>
+      <StrictMode>
+        <Navbar></Navbar>
+      </StrictMode>
+    </BrowserRouter>
+  </HelmetProvider>
 )
