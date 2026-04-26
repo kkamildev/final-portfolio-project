@@ -15,19 +15,20 @@ type Props = {
     icon:IconDefinition,
     shadowColorDesc?:string,
     destination:string,
-    selected:boolean
+    selected:boolean,
+    onClick:() => void
 }
 
 // main component
-const NavButton : FC<Props> = ({title, description, icon, shadowColorDesc = "shadow-white/12", destination, selected}) => {
+const NavButton : FC<Props> = ({title, description, icon, shadowColorDesc = "shadow-white/12", destination, selected, onClick}) => {
     return (
-        <li className={`bg-zinc-900 rounded-md hover:scale-105 mx-2 transition-transform duration-75 ease-in-out ${selected && "scale-105 shadow-md shadow-white/50"}`}>
-            <Link to={destination} className="flex flex-col cursor-pointer">
+        <li className={`bg-zinc-900 rounded-md hover:scale-105 mx-2 transition-transform duration-75 ease-in-out ${selected ? "scale-105 shadow-md shadow-white/40" : ""}`}>
+            <Link to={destination} className="flex flex-col cursor-pointer" onClick={onClick}>
                 <section className="flex items-center">
                     <FontAwesomeIcon icon={icon} className={`${shadowColorDesc} p-2 m-2 rounded-md bg-zinc-900 shadow-md`}/>
                     <h2 className="font-bold text-xl">{title}</h2>
                 </section>
-                <p className="p-2 w-100">
+                <p className="p-2 w-75">
                     {description}
                 </p>
             </Link>
