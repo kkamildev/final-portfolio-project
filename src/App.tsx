@@ -21,7 +21,7 @@ const App : FC<Props> = ({}) => {
             <Navbar></Navbar>
             <section className="w-112.5 h-screen bg-zinc-900 hidden lg:block">
             </section>
-            <section className="w-full min-h-screen bg-zinc-900 py-25 lg:py-10 px-10">
+            <section className="w-full min-h-screen bg-zinc-900 py-25 lg:py-10 px-10 overflow-y-scroll">
                 <Routes>
                     <Route path="/aboutme" element={<AboutPage/>}/>
                     <Route path="/history" element={<></>}/>

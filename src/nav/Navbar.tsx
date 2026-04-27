@@ -52,7 +52,7 @@ const Navbar : FC<Props> = ({}) => {
                         <ul className="flex flex-col gap-y-5">
                             <NavButton
                                 title="About me"
-                                description="My Person, beginnings in IT, current sitation, future in IT brand"
+                                description="My Person, beginnings in IT, current situation, future in IT brand"
                                 icon={faUser}
                                 shadowColorDesc="shadow-red-800/70"
                                 destination="/aboutme"
