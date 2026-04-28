@@ -30,8 +30,10 @@ const AnimatedBar : FC<Props> = ({className = "bg-red-800", animationDuration = 
         });
     }, []);
     return(
-        <section className={`h-2.5 ${className} my-5 rounded-2xl`} ref={ref}>
+        <section className="flex w-full justify-center">
+            <section className={`h-2.5 ${className} my-5 rounded-2xl`} ref={ref}>
 
+            </section>
         </section>
     )
 }
