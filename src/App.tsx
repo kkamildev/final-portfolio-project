@@ -23,7 +23,7 @@ const App : FC<Props> = ({}) => {
             </section>
             <section className="w-full min-h-screen bg-zinc-900 py-25 lg:py-10 px-10 overflow-y-scroll">
                 <Routes>
-                    <Route path="/aboutme" element={<AboutPage/>}/>
+                    <Route path="/" element={<AboutPage/>}/>
                     <Route path="/history" element={<></>}/>
                     <Route path="/projects" element={<></>}/>
                     <Route path="/knowledge" element={<></>}/>

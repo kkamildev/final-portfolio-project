@@ -1,8 +1,9 @@
 
 // import types
-import { useState, type FC } from "react";
+import { type FC } from "react";
 
 // import modules
+import {useState} from "react"
 import { faUser, faBook, faWrench, faEarthEurope, faCode, faLocationDot, faSearch, faBars} from "@fortawesome/free-solid-svg-icons";
 import NavButton from "./NavButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -55,7 +56,7 @@ const Navbar : FC<Props> = ({}) => {
                                 description="My Person, beginnings in IT, current situation, future in IT brand"
                                 icon={faUser}
                                 shadowColorDesc="shadow-red-800/70"
-                                destination="/aboutme"
+                                destination="/"
                                 selected={linksActivations[0]}
                                 onClick={() => setLinksActivations(() => arrayAfterChoose(0))}
                             />
