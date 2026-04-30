@@ -1,12 +1,13 @@
 
 // import types
-import { type FC } from "react";
+import {type FC } from "react";
 
 // import modules
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import { faUser, faBook, faWrench, faEarthEurope, faCode, faLocationDot, faSearch, faBars} from "@fortawesome/free-solid-svg-icons";
 import NavButton from "./NavButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useLocation } from "react-router-dom";
 
 
 // TS types
@@ -17,6 +18,7 @@ type Props = {
 // main component
 const Navbar : FC<Props> = ({}) => {
 
+    const location = useLocation();
 
     const [linksActivations, setLinksActivations] = useState<boolean[]>([true, false, false, false, false, false]);
     const [showed, setShowed] = useState<boolean>(false);
@@ -27,6 +29,15 @@ const Navbar : FC<Props> = ({}) => {
         setShowed(false);
         return prev;
     }
+
+    useEffect(() => {
+        const pages : string[] = ["/", "/history", "/knowledge", "/organizations", "/contact"];
+        for(let i = 0;i<pages.length;i++) {
+            if(pages[i] == location.pathname) {
+                setLinksActivations(() => arrayAfterChoose(i));
+            }
+        }
+    }, []);
 
     return (
         <>

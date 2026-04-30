@@ -5,13 +5,10 @@ import {type FC } from "react";
 
 // import modules
 import PageTitle from "../components/PageTitle";
-import AnimatedBar from "../components/AnimatedBar";
 import SEO from "../utils/SEO";
 
 // import assets
-import bullseye from "../assets/bullseye.png"
-import questionMark from "../assets/questionMark.png"
-import it from "../assets/it.png"
+
 import me from "../assets/me.jpg"
 
 // TS types
@@ -29,8 +26,59 @@ const HistoryPage : FC<Props> = ({}) => {
                 url="https://aboutme.pixlesofte.com/history"
                 img={me}
             />
-            <section className="m-2 p-2 flex flex-col">
+            <section className="m-2 p-2 flex flex-col text-white">
                 <PageTitle title="My history" subtitle="My interesting learning and working path"/>
+                <section className="">
+                    <h1 className="text-3xl font-extrabold">My learning Path to greatness</h1>
+                    <section className="h-2.5 bg-yellow-500 my-5 rounded-2xl w-1/2"></section>
+                    <p className="font-bold text-zinc-600 mt-2"></p>
+                </section>
+                <section className="w-full flex mt-10">
+                    <aside className="flex-1 flex flex-col items-center">
+                        <section className="flex flex-col items-center relative">
+                            <section className="h-16 w-16 rounded-full bg-yellow-500 relative top-2 flex justify-center items-center">
+                                <section className="h-8 w-8 rounded-full bg-zinc-900 relative"></section>
+                            </section>
+                            <section className="h-150.5 lg:h-100.5 w-5 bg-yellow-500"></section>
+                            <section className="h-16 w-16 rounded-full bg-orange-500 relative bottom-2 flex justify-center items-center z-20">
+                                <section className="h-8 w-8 rounded-full bg-zinc-900 relative"></section>
+                            </section>
+                        </section>
+                        <section className="flex flex-col items-center relative bottom-4">
+                            <section className="h-120.5 lg:h-80.5 w-5 bg-orange-500"></section>
+                            {/* <section className="h-16 w-16 rounded-full bg-orange-500 relative bottom-2 flex justify-center items-center">
+                                <section className="h-8 w-8 rounded-full bg-zinc-900 relative"></section>
+                            </section> */}
+                        </section>
+                        {/* <section className="flex flex-col items-center relative bottom-7">
+                            <section className="h-62.5 w-5 bg-yellow-500"></section>
+                            <section className="h-16 w-16 rounded-full bg-yellow-500 relative bottom-2 flex justify-center items-center">
+                                <section className="h-8 w-8 rounded-full bg-zinc-900 relative"></section>
+                            </section>
+                        </section> */}
+                    </aside>
+                    <aside className="flex-2 flex flex-col items-center">
+                        <section className="flex-2 mt-10">
+                            <h3 className="text-2xl font-extrabold">High-School (Communication Technical School No. 25 in Kraków)</h3>
+                            <section className="h-2.5 bg-yellow-500 my-5 rounded-2xl w-1/2"></section>
+                            <h4 className="text-2xl font-extrabold text-zinc-600">(September 2023 - expected graduation: April 2028)</h4>
+                            <p className="font-bold text-zinc-600 mt-2">
+                                In this High-School I have learnt many basics about IT and also it have given me path<br/> for future Software-Developer career.
+                                I was feeling good in this chapter of my life, I have learnt so much and also made cool projects. Technologies which I have learnt: 
+                                <span className="text-yellow-500"> MySQL, HTML, CSS, JS(Basics), React.js, PHP, Node.js, C#, Java(Basics)</span>
+                            </p>
+                        </section>
+                        <section className="flex-2 mt-10">
+                            <h3 className="text-2xl font-extrabold">Plans for college</h3>
+                            <section className="h-2.5 bg-orange-500 my-5 rounded-2xl w-1/2"></section>
+                            <h4 className="text-2xl font-extrabold text-zinc-600">(Expected start: October 2028)</h4>
+                            <p className="font-bold text-zinc-600 mt-2">
+                                I want go to college on <span className="text-orange-500">Computer Science field</span>, I want develop my potential in IT and also<span className="text-orange-500"> in Math (I love Math)</span>. I guess I know so much thinks but
+                                I want knowing more to be a specialist in this branch, to develop my greatness path. I hope everyting will be okay and I will be improving at college
+                            </p>
+                        </section>
+                    </aside>
+                </section>
             </section>
         </>
     )
