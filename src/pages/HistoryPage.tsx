@@ -32,7 +32,6 @@ const HistoryPage : FC<Props> = ({}) => {
                 <section className="my-10">
                     <h1 className="text-3xl font-extrabold">My learning Path to greatness</h1>
                     <section className="h-2.5 bg-yellow-500 my-5 rounded-2xl w-1/2"></section>
-                    <p className="font-bold text-zinc-600 mt-2"></p>
                 </section>
                 <section className="w-full flex mt-10">
                     <aside className="flex-1 flex flex-col items-center">
@@ -83,7 +82,6 @@ const HistoryPage : FC<Props> = ({}) => {
                 <section className="my-10">
                     <h1 className="text-3xl font-extrabold">My working path to success</h1>
                     <section className="h-2.5 bg-green-700 my-5 rounded-2xl w-1/2"></section>
-                    <p className="font-bold text-zinc-600 mt-2"></p>
                 </section>
                 <section className="w-full flex mt-10">
                     <aside className="flex-1 flex flex-col items-center">
