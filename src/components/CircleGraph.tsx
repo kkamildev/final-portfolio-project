@@ -5,6 +5,7 @@ import type { FC } from "react";
 // import modules
 import { useRef, useEffect, useState } from "react";
 import Circle from "./shapes/Circle";
+import anime from "animejs";
 
 // TS types
 type Props = {
@@ -18,16 +19,24 @@ type Props = {
 // main component
 const CircleGraph : FC<Props> = ({value, title, mainColorClass, description, shadowColorClass}) => {
 
-    const [visible, setVisible] = useState<boolean>(false);
+    const [animationProgress, setAnimationProgress] = useState<number>(0);
     
     const ref = useRef(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(([entry]) => {
             if(entry.isIntersecting) {
-                setVisible(true);
+                anime({
+                    targets: { v: 0 },
+                    v: 1,
+                    duration: 1000,
+                    easing: "easeOutQuad",
+                    update(anim) {
+                        setAnimationProgress(Number(anim.animations[0].currentValue));
+                    }
+                });
             } else {
-                setVisible(false);
+                setAnimationProgress(0);
             }
         })
 
@@ -35,9 +44,9 @@ const CircleGraph : FC<Props> = ({value, title, mainColorClass, description, sha
     }, [])
 
     return(
-        <section className={`relative flex flex-col justify-center items-center shadow-md ${shadowColorClass} rounded-lg p-5 hover:scale-105 transition-transform duration-75 ease-in-out`}>
-            <Circle value={value} mainColorClass={mainColorClass} performAnimation={visible}/>
-            <h3 ref={ref} className="text-3xl font-bold mt-5">{title}</h3>
+        <section ref={ref} className={`relative flex flex-col justify-center items-center shadow-md ${shadowColorClass} rounded-lg p-5 hover:scale-105 transition-transform duration-75 ease-in-out`}>
+            <Circle value={value * animationProgress} mainColorClass={mainColorClass}/>
+            <h3 className="text-3xl font-bold mt-5">{title}</h3>
             <p className="text-xl font-bold text-zinc-700 w-full text-center">{description}</p>
         </section>
     )
