@@ -41,7 +41,7 @@ const Navbar : FC<Props> = ({}) => {
 
     return (
         <>
-            <nav className={`h-screen bg-zinc-950 rounded-r-2xl p-3 text-white flex flex-col justify-between transition-transform duration-200 -translate-x-full lg:translate-x-0 overflow-y-scroll absolute z-10 ${showed ? "translate-x-0" : ""}`}>
+            <nav className={`h-screen bg-zinc-950 rounded-r-2xl p-3 text-white flex flex-col justify-between transition-transform duration-200 -translate-x-full lg:translate-x-0 overflow-y-scroll absolute z-50 ${showed ? "translate-x-0" : ""}`}>
                 <section>
                     <section className="flex flex-col justify-center items-center">
                         <h1 className="font-bold text-3xl">Explore Portfolio</h1>
@@ -123,7 +123,7 @@ const Navbar : FC<Props> = ({}) => {
                     <p className="font-bold text-zinc-700 text-center">&copy; Kkamildev 2026</p>
                 </section>
             </nav>
-            <section className="flex flex-col justify-start lg:hidden fixed" onClick={() => setShowed(true)}>
+            <section className="flex flex-col justify-start lg:hidden fixed z-40" onClick={() => setShowed(true)}>
                 <button className="p-5 bg-zinc-950 m-5 rounded-2xl w-17.5 h-17.5 cursor-pointer hover:bg-[#0f0f0f]">
                     <FontAwesomeIcon icon={faBars} className="text-white text-2xl"/>
                 </button>

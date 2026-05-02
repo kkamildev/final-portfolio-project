@@ -10,6 +10,7 @@ import CircleGraph from "../components/CircleGraph";
 // import assets
 import me from "../assets/me.jpg"
 import CertificateSection from "../components/CertificateSection";
+import SoftSkillSection from "../components/SoftSkillSection";
 
 
 
@@ -70,7 +71,7 @@ const KnowledgePage : FC<Props> = ({}) => {
                 </section>
                 <section className="my-10">
                     <h1 className="text-3xl font-extrabold">Technical Skills</h1>
-                    <section className="h-2.5 bg-cyan-500 my-5 rounded-2xl w-1/2"></section>
+                    <section className="h-2.5 bg-red-800 my-5 rounded-2xl w-1/2"></section>
                 </section>
                 <section className="my-10">
                     <h2 className="text-3xl font-extrabold">Basics</h2>
@@ -112,6 +113,60 @@ const KnowledgePage : FC<Props> = ({}) => {
                 </section>
                 <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-20">
                     <CircleGraph value={65} title="Git" mainColorClass="bg-pink-700" description="Version control" shadowColorClass="shadow-pink-700"/>
+                </section>
+                <section className="my-10">
+                    <h1 className="text-3xl font-extrabold">Soft-skills</h1>
+                    <section className="h-2.5 bg-red-800 my-5 rounded-2xl w-1/2"></section>
+                </section>
+                <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-20">
+                    <SoftSkillSection
+                        title="Teamwork"
+                        include={[
+                            "Management in team",
+                            "Making together decisions",
+                            "Task assignation"
+                        ]}
+                    />
+                    <SoftSkillSection
+                        title="Planning"
+                        include={[
+                            "Planning in team",
+                            "Planning work",
+                            "Making technical plans"
+                        ]}
+                    />
+                    <SoftSkillSection
+                        title="Creativity"
+                        include={[
+                            "Creative designs",
+                            "Creating creative content",
+                        ]}
+                    />
+                    <SoftSkillSection
+                        title="Solving problems"
+                        include={[
+                            "Hard coding problems",
+                            "Technical problems",
+                            "UX problems",
+                            "Logic problems",
+                        ]}
+                    />
+                    <SoftSkillSection
+                        title="Critical thinking"
+                        include={[
+                            "Improvisation",
+                            "Creating ideas",
+                            "Thinking about solving ideas",
+                        ]}
+                    />
+                    <SoftSkillSection
+                        title="Productivity"
+                        include={[
+                            "Time management",
+                            "Work planning",
+                            "Setting good goals",
+                        ]}
+                    />
                 </section>
             </section>
         </>

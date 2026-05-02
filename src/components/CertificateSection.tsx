@@ -1,8 +1,9 @@
 
 // import types
-import type { FC } from "react";
+import { type FC } from "react";
 
 // import modules
+import { useRef, useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
@@ -18,9 +19,25 @@ type Props = {
 
 // main component
 const CertificateSection : FC<Props> = ({title, subtitle = "", earnedBy, learnedThings, file}) => {
+
+    const [visible, setVisible] = useState<boolean>(false);
+    
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(([entry]) => {
+            if(entry.isIntersecting) {
+                setVisible(true);
+                observer.disconnect();
+            }
+        })
+
+        observer.observe(ref.current);
+    }, [])
+
     return (
-        <section className="p-2 rounded-xl bg-zinc-900 shadow-md shadow-red-800">
-            <h2 className="font-bold text-center text-2xl">{title}</h2>
+        <section className={`p-2 rounded-xl bg-zinc-900 shadow-md opacity-0 shadow-red-800 ${visible ? "animate-fadeInUp" : ""}`}>
+            <h2 ref={ref} className="font-bold text-center text-2xl">{title}</h2>
             <h3 className="font-bold text-center text-xl text-red-800 mt-1">{earnedBy}</h3>
             <p className="font-bold text-zinc-600 my-5 text-center">{subtitle}</p>
             <h4 className="font-bold  my-5 text-center text-xl">What did I learn?</h4>
