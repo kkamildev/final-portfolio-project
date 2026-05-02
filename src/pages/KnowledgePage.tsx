@@ -9,6 +9,7 @@ import CircleGraph from "../components/CircleGraph";
 
 // import assets
 import me from "../assets/me.jpg"
+import CertificateSection from "../components/CertificateSection";
 
 
 
@@ -29,6 +30,44 @@ const KnowledgePage : FC<Props> = ({}) => {
             />
             <section className="m-2 p-2 flex flex-col text-white">
                 <PageTitle title="My knowledge" subtitle="My knowledge, skills, courses and certificates - find out"/>
+                <section className="my-10">
+                    <h1 className="text-3xl font-extrabold">Certificates</h1>
+                    <section className="h-2.5 bg-red-800 my-5 rounded-2xl w-1/2"></section>
+                </section>
+                <section className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                    <CertificateSection
+                        title="JavaScript (Intermediate)"
+                        subtitle="Achieved by passing JavaScript skill certification test"
+                        earnedBy="HackerRank"
+                        file="javascript_intermediate certificate.pdf"
+                        learnedThings={[
+                            "More advanced JS",
+                            "JS objects",
+                            "JS advanced functions"
+                        ]}
+                    />
+                    <CertificateSection
+                        title="Responsive Web Design"
+                        subtitle="Achieved by making Web Design skill certification projects"
+                        earnedBy="FreeCodeCamp"
+                        file="css-certificate.pdf"
+                        learnedThings={[
+                            "CSS responsibility",
+                            "CSS techniques",
+                            "Good layout"
+                        ]}
+                    />
+                    <CertificateSection
+                        title="SQL (Intermediate)"
+                        subtitle="Achieved by passing SQL skill certification test"
+                        earnedBy="HackerRank"
+                        file="sql_intermediate certificate.pdf"
+                        learnedThings={[
+                            "Simplifying queries",
+                            "Advanced joins",
+                        ]}
+                    />
+                </section>
                 <section className="my-10">
                     <h1 className="text-3xl font-extrabold">Technical Skills</h1>
                     <section className="h-2.5 bg-cyan-500 my-5 rounded-2xl w-1/2"></section>

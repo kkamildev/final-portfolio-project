@@ -45,7 +45,7 @@ const AboutSection : FC<Props> = ({title, description, margin = false, reversedF
             </section>
             <section className="block xl:flex">
                 {
-                    images.map((obj, index) => <img src={obj} alt={alts[index] ?? "Photo"} className="rounded-2xl h-62.5 w-62.5" loading="lazy"/>)
+                    images.map((obj, index) => <img key={index} src={obj} alt={alts[index] ?? "Photo"} className="rounded-2xl h-62.5 w-62.5" loading="lazy"/>)
                 }
             </section>
         </section>
