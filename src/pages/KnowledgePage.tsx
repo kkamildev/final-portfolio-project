@@ -6,11 +6,14 @@ import type { FC } from "react";
 import PageTitle from "../components/PageTitle";
 import SEO from "../utils/SEO";
 import CircleGraph from "../components/CircleGraph";
+import CertificateSection from "../components/CertificateSection";
+import SoftSkillSection from "../components/SoftSkillSection";
+import LanguageSection from "../components/LanguageSection";
 
 // import assets
 import me from "../assets/me.jpg"
-import CertificateSection from "../components/CertificateSection";
-import SoftSkillSection from "../components/SoftSkillSection";
+import PolandFlag from "../assets/polandFlag.png"
+import UsaFlag from "../assets/usaFlag.webp"
 
 
 
@@ -31,6 +34,22 @@ const KnowledgePage : FC<Props> = ({}) => {
             />
             <section className="m-2 p-2 flex flex-col text-white">
                 <PageTitle title="My knowledge" subtitle="My knowledge, skills, courses and certificates - find out"/>
+                <section className="my-10">
+                    <h1 className="text-3xl font-extrabold">Languages</h1>
+                    <section className="h-2.5 bg-red-800 my-5 rounded-2xl w-1/2"></section>
+                </section>
+                <section className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                    <LanguageSection
+                        title="Polish"
+                        subtitle="Native Speaker"
+                        image={PolandFlag}
+                    />
+                    <LanguageSection
+                        title="English"
+                        subtitle="B1-level"
+                        image={UsaFlag}
+                    />
+                </section>
                 <section className="my-10">
                     <h1 className="text-3xl font-extrabold">Certificates</h1>
                     <section className="h-2.5 bg-red-800 my-5 rounded-2xl w-1/2"></section>

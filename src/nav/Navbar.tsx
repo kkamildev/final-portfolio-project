@@ -82,7 +82,7 @@ const Navbar : FC<Props> = ({}) => {
                             />
                             <NavButton
                                 title="Knowledge"
-                                description="Skills, certificates, soft-skills"
+                                description="Skills, certificates, soft-skills, languages"
                                 icon={faWrench}
                                 shadowColorDesc="shadow-yellow-800/70"
                                 destination="/knowledge"
