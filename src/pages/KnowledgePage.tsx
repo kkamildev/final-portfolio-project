@@ -5,7 +5,7 @@ import type { FC } from "react";
 // import modules
 import PageTitle from "../components/PageTitle";
 import SEO from "../utils/SEO";
-import CircleGraph from "../components/CircleGraph";
+import ProgrammingSection from "../components/ProgrammingSection";
 import CertificateSection from "../components/CertificateSection";
 import SoftSkillSection from "../components/SoftSkillSection";
 import LanguageSection from "../components/LanguageSection";
@@ -96,42 +96,78 @@ const KnowledgePage : FC<Props> = ({}) => {
                     <h2 className="text-3xl font-extrabold">Basics</h2>
                 </section>
                 <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-20">
-                    <CircleGraph value={95} title="HTML" mainColorClass="bg-orange-700" description="Mainly known" shadowColorClass="shadow-orange-700"/>
-                    <CircleGraph value={90} title="CSS" mainColorClass="bg-sky-500" description="Mainly known" shadowColorClass="shadow-sky-500"/>
-                    <CircleGraph value={80} title="JS(Plain)" mainColorClass="bg-yellow-500" description="Website Scripts basics" shadowColorClass="shadow-yellow-500"/>
-                    <CircleGraph value={90} title="C#(Plain)" mainColorClass="bg-cyan-800" description="Mainly known" shadowColorClass="shadow-cyan-800"/>
-                    <CircleGraph value={55} title="Java(Plain)" mainColorClass="bg-red-800" description="Mainly OOP" shadowColorClass="shadow-red-800"/>
-                    <CircleGraph value={20} title="C++(Plain)" mainColorClass="bg-blue-900" description="Basics of Basics" shadowColorClass="shadow-blue-900"/>
-                    <CircleGraph value={60} title="Python(Plain)" mainColorClass="bg-amber-500" description="Basics" shadowColorClass="shadow-amber-500"/>
+                    <ProgrammingSection value={95} title="HTML" mainColorClass="bg-orange-700" shadowColorClass="shadow-orange-700"
+                        examples={[
+                            "Layout", "Specific tags"
+                        ]}
+                    />
+                    <ProgrammingSection value={90} title="CSS" mainColorClass="bg-sky-500" shadowColorClass="shadow-sky-500"
+                        examples={[
+                            "Good UX", "Responsibility", "Clear-Website design"
+                        ]}
+                    />
+                    <ProgrammingSection value={80} title="JS(Plain)" mainColorClass="bg-yellow-500" shadowColorClass="shadow-yellow-500"
+                        examples={["ES6", "Async/await", "Sending requests"]}
+                    />
+                    <ProgrammingSection value={90} title="C#(Plain)" mainColorClass="bg-cyan-800" shadowColorClass="shadow-cyan-800"
+                        examples={["OOP", "Async/await", "TCP/UDP"]}
+                    />
+                    <ProgrammingSection value={55} title="Java(Plain)" mainColorClass="bg-red-800" shadowColorClass="shadow-red-800"
+                        examples={["OOP", "Reading files"]}
+                    />
+                    <ProgrammingSection value={20} title="C++(Plain)" mainColorClass="bg-blue-900" shadowColorClass="shadow-blue-900"
+                        examples={["I/O operations", "File operations"]}
+                    />
+                    <ProgrammingSection value={60} title="Python(Plain)" mainColorClass="bg-amber-500" shadowColorClass="shadow-amber-500"
+                        examples={["OOP", "Simple requests", "Simple desktop apps"]}
+                    />
                 </section>
                 <section className="my-10">
                     <h2 className="text-3xl font-extrabold">Databases</h2>
                 </section>
                 <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-20">
-                    <CircleGraph value={70} title="MySQL" mainColorClass="bg-orange-800" description="Relational DB" shadowColorClass="shadow-orange-800"/>
-                    <CircleGraph value={50} title="MongoDB" mainColorClass="bg-green-600" description="Non-Relational DB" shadowColorClass="shadow-green-600"/>
+                    <ProgrammingSection value={70} title="MySQL" mainColorClass="bg-orange-800" shadowColorClass="shadow-orange-800"
+                        examples={["Joins", "Aggregate functions", "Users management"]}
+                    />
+                    <ProgrammingSection value={50} title="MongoDB" mainColorClass="bg-green-600" shadowColorClass="shadow-green-600"
+                        examples={["Data management", "Some mongosh code"]}
+                    />
                 </section>
                 <section className="my-10">
                     <h2 className="text-3xl font-extrabold">Backend</h2>
                 </section>
                 <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-20">
-                    <CircleGraph value={30} title="PHP" mainColorClass="bg-purple-800" description="Backend" shadowColorClass="shadow-purple-800"/>
-                    <CircleGraph value={80} title="Node.js" mainColorClass="bg-lime-600" description="Backend" shadowColorClass="shadow-lime-600"/>
-                    <CircleGraph value={75} title="Express.js" mainColorClass="bg-gray-500" description="Backend framework" shadowColorClass="shadow-gray-500"/>
-                    <CircleGraph value={25} title="Flask" mainColorClass="bg-amber-500" description="Python framework" shadowColorClass="shadow-amber-500"/>
+                    <ProgrammingSection value={30} title="PHP" mainColorClass="bg-purple-800" shadowColorClass="shadow-purple-800"
+                        examples={["SQL connection", "Sessions/Cookies", "Simple language functions", "Request decontamination"]}
+                    />
+                    <ProgrammingSection value={80} title="Node.js" mainColorClass="bg-lime-600" shadowColorClass="shadow-lime-600"
+                        examples={["HTTP server", "Dotenv", "WebSocket", "Sessions"]}
+                    />
+                    <ProgrammingSection value={75} title="Express.js" mainColorClass="bg-gray-500" shadowColorClass="shadow-gray-500"
+                        examples={["Routing", "Handling errors", "JWT auth"]}
+                    />
+                    <ProgrammingSection value={25} title="Flask" mainColorClass="bg-amber-500" shadowColorClass="shadow-amber-500"
+                        examples={["HTML templates", "MySQL schemas", "API creating"]}
+                    />
                 </section>
                 <section className="my-10">
                     <h2 className="text-3xl font-extrabold">Frontend</h2>
                 </section>
                 <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-20">
-                    <CircleGraph value={70} title="React.js" mainColorClass="bg-cyan-500" description="JS framework" shadowColorClass="shadow-cyan-500"/>
-                    <CircleGraph value={70} title="Tailwind" mainColorClass="bg-blue-700" description="Styles" shadowColorClass="shadow-blue-700"/>
+                    <ProgrammingSection value={70} title="React.js" mainColorClass="bg-cyan-500" shadowColorClass="shadow-cyan-500"
+                        examples={["React-router-dom", "Zustand", "Axios"]}
+                    />
+                    <ProgrammingSection value={70} title="Tailwind" mainColorClass="bg-blue-700" shadowColorClass="shadow-blue-700" 
+                        examples={["Animations", "Creating own classes", "Classes knowledge"]}
+                    />
                 </section>
                 <section className="my-10">
                     <h2 className="text-3xl font-extrabold">Utilities</h2>
                 </section>
                 <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-20">
-                    <CircleGraph value={65} title="Git" mainColorClass="bg-pink-700" description="Version control" shadowColorClass="shadow-pink-700"/>
+                    <ProgrammingSection value={65} title="Git" mainColorClass="bg-pink-700" shadowColorClass="shadow-pink-700"
+                        examples={["Commit/push", "Branches", "Merge"]}
+                    />
                 </section>
                 <section className="my-10">
                     <h1 className="text-3xl font-extrabold">Soft-skills</h1>
