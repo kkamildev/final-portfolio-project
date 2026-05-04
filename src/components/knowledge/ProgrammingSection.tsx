@@ -4,7 +4,7 @@ import type { FC } from "react";
 
 // import modules
 import { useRef, useEffect, useState } from "react";
-import Circle from "./shapes/Circle";
+import Circle from "../shapes/Circle";
 import anime from "animejs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";

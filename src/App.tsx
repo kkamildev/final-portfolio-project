@@ -9,6 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
 import HistoryPage from "./pages/HistoryPage";
 import KnowledgePage from "./pages/KnowledgePage";
+import ContactPage from "./pages/ContactPage";
 
 
 // TS types
@@ -30,7 +31,7 @@ const App : FC<Props> = ({}) => {
                     <Route path="/projects" element={<></>}/>
                     <Route path="/knowledge" element={<KnowledgePage/>}/>
                     <Route path="/organizations" element={<></>}/>
-                    <Route path="/contact" element={<></>}/>
+                    <Route path="/contact" element={<ContactPage/>}/>
                 </Routes>
             </section>
         </main>

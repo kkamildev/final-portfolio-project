@@ -5,10 +5,10 @@ import type { FC } from "react";
 // import modules
 import PageTitle from "../components/PageTitle";
 import SEO from "../utils/SEO";
-import ProgrammingSection from "../components/ProgrammingSection";
-import CertificateSection from "../components/CertificateSection";
-import SoftSkillSection from "../components/SoftSkillSection";
-import LanguageSection from "../components/LanguageSection";
+import ProgrammingSection from "../components/knowledge/ProgrammingSection";
+import CertificateSection from "../components/knowledge/CertificateSection";
+import SoftSkillSection from "../components/knowledge/SoftSkillSection";
+import LanguageSection from "../components/knowledge/LanguageSection";
 
 // import assets
 import me from "../assets/me.jpg"

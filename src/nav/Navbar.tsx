@@ -31,7 +31,7 @@ const Navbar : FC<Props> = ({}) => {
     }
 
     useEffect(() => {
-        const pages : string[] = ["/", "/history", "/knowledge", "/organizations", "/contact"];
+        const pages : string[] = ["/", "/history", "/knowledge", "/projects", "/organizations", "/contact"];
         for(let i = 0;i<pages.length;i++) {
             if(pages[i] == location.pathname) {
                 setLinksActivations(() => arrayAfterChoose(i));
@@ -109,7 +109,7 @@ const Navbar : FC<Props> = ({}) => {
                             />
                             <NavButton
                                 title="Contact"
-                                description="Socials, location, email, collaboration"
+                                description="Socials, location, email"
                                 icon={faLocationDot}
                                 shadowColorDesc="shadow-purple-800/70"
                                 destination="/contact"
