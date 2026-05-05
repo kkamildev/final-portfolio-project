@@ -4,7 +4,7 @@ import {type FC } from "react";
 
 // import modules
 import {useState, useEffect} from "react"
-import { faUser, faBook, faWrench, faEarthEurope, faCode, faLocationDot, faSearch, faBars} from "@fortawesome/free-solid-svg-icons";
+import { faUser, faBook, faWrench, faEarthEurope, faCode, faLocationDot, faBars} from "@fortawesome/free-solid-svg-icons";
 import NavButton from "./NavButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLocation } from "react-router-dom";
@@ -45,20 +45,9 @@ const Navbar : FC<Props> = ({}) => {
                 <section>
                     <section className="flex flex-col justify-center items-center">
                         <h1 className="font-bold text-3xl">Explore Portfolio</h1>
-                        <p className="font-bold text-xl mt-2">Find informations via search</p>
                     </section>
                     <section className="flex flex-col justify-center items-center mt-6">
-                        <section className="m-2 rounded-xl bg-zinc-900">
-                            <label htmlFor="search">
-                                <FontAwesomeIcon icon={faSearch} className="px-2 scale-150"/>
-                            </label>
-                            <input type="text" placeholder="Search..." className=" p-3 rounded-xl flex-1 font-bold" id="search"/>
-                        </section>
-                        <section>
-                            {
-                                // Results search here will come
-                            }
-                        </section>
+                        <p className="font-bold text-2xl text-zinc-700 text-center">Find out informations<br/> about me</p>
                     </section>
                     <section className="mt-5">
                         <ul className="flex flex-col gap-y-5">
