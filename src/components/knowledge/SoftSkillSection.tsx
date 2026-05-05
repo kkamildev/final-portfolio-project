@@ -39,7 +39,7 @@ const SoftSkillSection : FC<Props> = ({title, include}) => {
             <h4 className="font-bold  my-5 text-center text-xl">Skill includes:</h4>
             <section className="flex justify-center">
                 <section className="flex flex-col justify-start items-start mb-5 gap-y-2">
-                    {include.map((obj, index) => <p className="font-bold text-zinc-600" key={index}><FontAwesomeIcon className="text-green-600 mx-3 scale-110" icon={faCircleCheck}/>{obj}</p>)}
+                    {include.map((obj, index) => <p className="font-bold text-zinc-600 flex items-center justify-between" key={index}><FontAwesomeIcon className="text-green-600 mx-3 scale-110" icon={faCircleCheck}/>{obj}</p>)}
                 </section>
             </section>
         </section>

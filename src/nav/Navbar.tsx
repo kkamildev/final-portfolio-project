@@ -31,7 +31,7 @@ const Navbar : FC<Props> = ({}) => {
     }
 
     useEffect(() => {
-        const pages : string[] = ["/", "/history", "/knowledge", "/projects", "/organizations", "/contact"];
+        const pages : string[] = ["/", "/history", "/knowledge", "/projects", "/community", "/contact"];
         for(let i = 0;i<pages.length;i++) {
             if(pages[i] == location.pathname) {
                 setLinksActivations(() => arrayAfterChoose(i));
@@ -99,11 +99,11 @@ const Navbar : FC<Props> = ({}) => {
                                 onClick={() => setLinksActivations(() => arrayAfterChoose(3))}
                             />
                             <NavButton
-                                title="Organizations"
-                                description="My organizations, organizations participating, partnership"
+                                title="Community"
+                                description="About community, IT events, my organizations"
                                 icon={faEarthEurope}
                                 shadowColorDesc="shadow-cyan-800/70"
-                                destination="/organizations"
+                                destination="/community"
                                 selected={linksActivations[4]}
                                 onClick={() => setLinksActivations(() => arrayAfterChoose(4))}
                             />

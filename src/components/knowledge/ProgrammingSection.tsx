@@ -52,7 +52,7 @@ const ProgrammingSection : FC<Props> = ({value, title, mainColorClass, shadowCol
             <h2 className="text-2xl font-bold my-5">Examples:</h2>
             <section className="flex justify-center">
                 <section className="flex flex-col justify-start items-start mb-5 gap-y-2">
-                    {examples.map((obj, index) => <p className="font-bold text-zinc-600" key={index}><FontAwesomeIcon className="text-green-600 mx-3 scale-110" icon={faCircleCheck}/>{obj}</p>)}
+                    {examples.map((obj, index) => <p className="font-bold text-zinc-600 flex items-center justify-between" key={index}><FontAwesomeIcon className="text-green-600 mx-3 scale-110" icon={faCircleCheck}/>{obj}</p>)}
                 </section>
             </section>
         </section>
