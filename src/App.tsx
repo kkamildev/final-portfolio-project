@@ -11,6 +11,7 @@ import HistoryPage from "./pages/HistoryPage";
 import KnowledgePage from "./pages/KnowledgePage";
 import ContactPage from "./pages/ContactPage";
 import CommunityPage from "./pages/CommunityPage";
+import ProjectsPage from "./pages/ProjectsPage";
 
 
 // TS types
@@ -29,7 +30,7 @@ const App : FC<Props> = ({}) => {
                 <Routes>
                     <Route path="/" element={<AboutPage/>}/>
                     <Route path="/history" element={<HistoryPage/>}/>
-                    <Route path="/projects" element={<></>}/>
+                    <Route path="/projects" element={<ProjectsPage/>}/>
                     <Route path="/knowledge" element={<KnowledgePage/>}/>
                     <Route path="/community" element={<CommunityPage/>}/>
                     <Route path="/contact" element={<ContactPage/>}/>
