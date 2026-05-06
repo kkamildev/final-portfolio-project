@@ -5,7 +5,7 @@ import type { FC } from "react";
 
 // import modules
 import Navbar from "./nav/Navbar";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
 import HistoryPage from "./pages/HistoryPage";
 import KnowledgePage from "./pages/KnowledgePage";
@@ -34,6 +34,7 @@ const App : FC<Props> = ({}) => {
                     <Route path="/knowledge" element={<KnowledgePage/>}/>
                     <Route path="/community" element={<CommunityPage/>}/>
                     <Route path="/contact" element={<ContactPage/>}/>
+                    <Route path="*" element={<Navigate to="/"/>}/>
                 </Routes>
             </section>
         </main>

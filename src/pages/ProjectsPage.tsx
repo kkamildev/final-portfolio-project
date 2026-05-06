@@ -29,7 +29,8 @@ const ProjectsPage : FC<Props> = ({}) => {
     const [searchValue, setSearchValue] = useState<string>("");
 
     const searchProjects = (searchString : string) => {
-        setProjects(() => [<ProjectCard
+        setProjects(() => [
+        <ProjectCard
             onChooseTag={setSearchValue}
             projectName="Minesweeper"
             simpleDescription="A basic game created using C++ and CMake"
