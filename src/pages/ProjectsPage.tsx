@@ -1,7 +1,7 @@
 
 
 // import types
-import { type FC, type ReactNode } from "react";
+import { useEffect, type FC, type ReactNode } from "react";
 
 // import modules
 import PageTitle from "../components/PageTitle";
@@ -9,9 +9,11 @@ import SEO from "../utils/SEO";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import ProjectCard from "../components/projects/ProjectCard";
 
 // import assets
 import me from "../assets/me.jpg"
+import minesweeper1 from "../assets/projects/minesweeper1.png"
 
 
 
@@ -24,10 +26,32 @@ type Props = {
 const ProjectsPage : FC<Props> = ({}) => {
 
     const [projects, setProjects] = useState<ReactNode[]>([]);
+    const [searchValue, setSearchValue] = useState<string>("");
 
     const searchProjects = (searchString : string) => {
-        
+        setProjects(() => [<ProjectCard
+            onChooseTag={setSearchValue}
+            projectName="Minesweeper"
+            simpleDescription="A basic game created using C++ and CMake"
+            tags={[
+                "C++",
+                "Desktop application",
+                "Game"
+            ]}
+            tagsColors={[
+                "bg-blue-900",
+                "bg-red-900",
+                "bg-orange-800"
+            ]}
+            image={minesweeper1}
+            completed
+            
+        />])
     }
+
+    useEffect(() => {
+        searchProjects(searchValue);
+    }, [searchValue]);
 
     return(
         <>
@@ -44,7 +68,8 @@ const ProjectsPage : FC<Props> = ({}) => {
                     <section className="flex items-center mt-5 p-2 bg-zinc-800 text-2xl rounded-2xl">
                         <label htmlFor="search-input" className=""><FontAwesomeIcon icon={faMagnifyingGlass}/></label>
                         <input type="text" id="search-input" className="w-full font-bold ml-3 focus:outline-none focus:ring-0" placeholder="Search..."
-                            onChange={(e) => searchProjects(e.target.value)}
+                            onChange={(e) => setSearchValue(e.target.value)}
+                            value={searchValue}
                         />
                     </section>
                 </section>
