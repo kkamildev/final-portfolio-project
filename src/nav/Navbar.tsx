@@ -37,7 +37,7 @@ const Navbar : FC<Props> = ({}) => {
                 setLinksActivations(() => arrayAfterChoose(i));
             }
         }
-    }, []);
+    }, [location.pathname]);
 
     return (
         <>

@@ -1,19 +1,21 @@
 
 
 // import types
-import { useEffect, type FC, type ReactNode } from "react";
+import {type FC, type ReactNode } from "react";
+import { type Project} from "../utils/ProjectsData";
 
 // import modules
 import PageTitle from "../components/PageTitle";
 import SEO from "../utils/SEO";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
-import ProjectCard from "../components/projects/ProjectCard";
+import { useState, useEffect} from "react";
+import ProjectsData from "../utils/ProjectsData";
 
 // import assets
 import me from "../assets/me.jpg"
-import minesweeper1 from "../assets/projects/minesweeper1.png"
+import ProjectCard from "../components/projects/ProjectCard";
+import { useSearchParams } from "react-router-dom";
 
 
 
@@ -22,37 +24,42 @@ type Props = {
 
 }
 
+// other components
+
+const filter = (project : Project, searchString : string) : boolean => {
+    if(searchString.length == 0) {
+        return true;
+    }
+    if(searchString.startsWith("#")) {
+        return project.tags.some((tag) => tag.toLowerCase().includes(searchString.substring(1).toLowerCase()))
+    }
+    return project.name.toLowerCase().includes(searchString.toLowerCase());
+}
+
 // main component
 const ProjectsPage : FC<Props> = ({}) => {
 
     const [projects, setProjects] = useState<ReactNode[]>([]);
-    const [searchValue, setSearchValue] = useState<string>("");
+    const [searchParams, setSearchParams] = useSearchParams();
+    
 
     const searchProjects = (searchString : string) => {
-        setProjects(() => [
-        <ProjectCard
-            onChooseTag={setSearchValue}
-            projectName="Minesweeper"
-            simpleDescription="A basic game created using C++ and CMake"
-            tags={[
-                "C++",
-                "Desktop application",
-                "Game"
-            ]}
-            tagsColors={[
-                "bg-blue-900",
-                "bg-red-900",
-                "bg-orange-800"
-            ]}
-            image={minesweeper1}
-            completed
-            
-        />])
+        setProjects(() => ProjectsData().filter((obj) => filter(obj, searchString)).map((obj, index) => <ProjectCard
+            onChooseTag={setSearchParams}
+            projectName={obj.name}
+            simpleDescription={obj.simpleDescription}
+            tags={obj.tags}
+            tagsColors={obj.tagsColors}
+            image={obj.image}
+            completed={obj.completed}
+            key={index}
+        
+        />))
     }
 
     useEffect(() => {
-        searchProjects(searchValue);
-    }, [searchValue]);
+        searchProjects(searchParams.get("search") || "");
+    }, [searchParams]);
 
     return(
         <>
@@ -69,8 +76,8 @@ const ProjectsPage : FC<Props> = ({}) => {
                     <section className="flex items-center mt-5 p-2 bg-zinc-800 text-2xl rounded-2xl">
                         <label htmlFor="search-input" className=""><FontAwesomeIcon icon={faMagnifyingGlass}/></label>
                         <input type="text" id="search-input" className="w-full font-bold ml-3 focus:outline-none focus:ring-0" placeholder="Search..."
-                            onChange={(e) => setSearchValue(e.target.value)}
-                            value={searchValue}
+                            onChange={(e) => setSearchParams({search:e.target.value || ""})}
+                            value={searchParams.get("search") || ""}
                         />
                     </section>
                 </section>
