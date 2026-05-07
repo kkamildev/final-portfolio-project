@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect} from "react";
 import ProjectsData from "../utils/ProjectsData";
+import SearchTipBar from "../components/projects/SearchTipBar";
 
 // import assets
 import me from "../assets/me.jpg"
@@ -71,7 +72,7 @@ const ProjectsPage : FC<Props> = ({}) => {
             />
             <section className="m-2 p-2 flex flex-col text-white">
                 <PageTitle title="Projects" subtitle="So find out about the most important - my projects"/>
-                <section className="my-10">
+                <section className="my-10 relative z-10">
                     <h1 className="text-3xl font-extrabold">Search Projects</h1>
                     <section className="flex items-center mt-5 p-2 bg-zinc-800 text-2xl rounded-2xl">
                         <label htmlFor="search-input" className=""><FontAwesomeIcon icon={faMagnifyingGlass}/></label>
@@ -80,6 +81,7 @@ const ProjectsPage : FC<Props> = ({}) => {
                             value={searchParams.get("search") || ""}
                         />
                     </section>
+                    <SearchTipBar/>
                 </section>
                 <section className="my-10">
                     <h1 className="text-3xl font-extrabold">Found projects</h1>
