@@ -11,6 +11,7 @@ import PageTitle from "../components/PageTitle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
+import AnimatedBar from "../components/AnimatedBar";
 
 
 
@@ -70,7 +71,7 @@ const ProjectPage : FC<Props> = ({}) => {
                     <h1 className="text-3xl font-extrabold">Used Technologies</h1>
                     <section className="h-2.5 bg-red-800 my-5 rounded-2xl w-1/2"></section>
                 </section>
-                <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-20">
+                <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-20 mb-10">
                     {
                         project.technologies.map((obj, index) => 
                             <section key={index} className={`relative flex flex-col justify-start items-center shadow-md ${obj.shadowColor} rounded-lg p-5 hover:scale-105 transition-transform duration-75 ease-in-out`}>
@@ -85,6 +86,23 @@ const ProjectPage : FC<Props> = ({}) => {
                         )
                     }
                 </section>
+                <section className="my-10">
+                    <AnimatedBar
+                        animationDuration={Math.random() * 1000 + 1000}
+                        className="bg-red-900 m-0!"
+                        borders={["20%", "60%"]}
+                    />
+                    <AnimatedBar
+                        animationDuration={Math.random() * 1000 + 1000}
+                        className="bg-red-800 m-0!"
+                        borders={["20%", "60%"]}
+                    />
+                    <AnimatedBar
+                        animationDuration={Math.random() * 1000 + 1000}
+                        className="bg-red-700 m-0!"
+                        borders={["20%", "60%"]}
+                    />
+                </section>
                 {
                     project.text.map((obj, index) =>
                     <React.Fragment key={index}>
@@ -97,10 +115,30 @@ const ProjectPage : FC<Props> = ({}) => {
                     )
                 }
                 <section className="my-10">
-                    <h1 className="text-3xl font-extrabold">Screen from project</h1>
-                    <section className="h-2.5 bg-red-800 my-5 rounded-2xl w-1/2"></section>
+                    <AnimatedBar
+                        animationDuration={Math.random() * 1000 + 1000}
+                        className="bg-red-900 m-0!"
+                        borders={["20%", "60%"]}
+                    />
+                    <AnimatedBar
+                        animationDuration={Math.random() * 1000 + 1000}
+                        className="bg-red-800 m-0!"
+                        borders={["20%", "60%"]}
+                    />
+                    <AnimatedBar
+                        animationDuration={Math.random() * 1000 + 1000}
+                        className="bg-red-700 m-0!"
+                        borders={["20%", "60%"]}
+                    />
                 </section>
-                <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-20">
+                {
+                    project.images.length > 0 &&
+                    <section className="mb-10 mt-20">
+                        <h1 className="text-3xl font-extrabold">Screens from project</h1>
+                        <section className="h-2.5 bg-red-800 my-5 rounded-2xl w-1/2"></section>
+                    </section>
+                }
+                <section className="grid grid-cols-1 md:grid-cols-2 gap-20">
                     {
                         project.images.map((obj, index) => 
                             <section key={index} className={`flex flex-col justify-start items-center rounded-b-lg p-5 hover:scale-105 transition-transform duration-75 ease-in-out`}>
