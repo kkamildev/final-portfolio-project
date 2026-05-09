@@ -20,7 +20,7 @@ const Navbar : FC<Props> = ({}) => {
 
     const location = useLocation();
 
-    const [linksActivations, setLinksActivations] = useState<boolean[]>([true, false, false, false, false, false]);
+    const [linksActivations, setLinksActivations] = useState<boolean[]>([false, false, false, false, false, false]);
     const [showed, setShowed] = useState<boolean>(false);
 
     const arrayAfterChoose = (index: number) : boolean[] => {

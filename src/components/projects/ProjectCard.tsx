@@ -1,10 +1,12 @@
 
 // import types
 import type { FC} from "react";
-import { Link, type SetURLSearchParams } from "react-router-dom";
+import {type SetURLSearchParams } from "react-router-dom";
 
 // import modules
 import { useState, useRef, useEffect } from "react";
+import ProjectsData from "../../utils/ProjectsData";
+import { Link } from "react-router-dom";
 
 
 // import assets
@@ -66,7 +68,7 @@ const ProjectCard : FC<Props> = ({projectName, image, tags, tagsColors, simpleDe
                 </section>
             </section>
             <section className="flex justify-center mt-5">
-                <Link to={`/projects/${projectName}`}>
+                <Link to={`/projects/${ProjectsData().findIndex((obj) => obj.name === projectName)}`}>
                     <button className="m-2 p-2 bg-red-900 hover:bg-red-800 hover:scale-105 text-white text-xl font-bold cursor-pointer rounded-md transition-all duration-100 ease-in-out">
                         Show Project
                     </button>

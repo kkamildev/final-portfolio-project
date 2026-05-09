@@ -12,11 +12,11 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect} from "react";
 import ProjectsData from "../utils/ProjectsData";
 import SearchTipBar from "../components/projects/SearchTipBar";
+import ProjectCard from "../components/projects/ProjectCard";
+import { useSearchParams } from "react-router-dom";
 
 // import assets
 import me from "../assets/me.jpg"
-import ProjectCard from "../components/projects/ProjectCard";
-import { useSearchParams } from "react-router-dom";
 
 
 

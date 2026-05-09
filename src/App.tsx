@@ -12,6 +12,7 @@ import KnowledgePage from "./pages/KnowledgePage";
 import ContactPage from "./pages/ContactPage";
 import CommunityPage from "./pages/CommunityPage";
 import ProjectsPage from "./pages/ProjectsPage";
+import ProjectPage from "./pages/ProjectPage";
 
 
 // TS types
@@ -26,7 +27,7 @@ const App : FC<Props> = ({}) => {
             <Navbar></Navbar>
             <section className="w-112.5 h-screen bg-zinc-900 hidden lg:block">
             </section>
-            <section className="w-full min-h-screen bg-zinc-900 py-25 lg:py-10 px-10 overflow-y-scroll">
+            <section id="scroll-container" className="w-full min-h-screen bg-zinc-900 py-25 lg:py-10 px-3 lg:px-10 overflow-y-scroll">
                 <Routes>
                     <Route path="/" element={<AboutPage/>}/>
                     <Route path="/history" element={<HistoryPage/>}/>
@@ -34,6 +35,7 @@ const App : FC<Props> = ({}) => {
                     <Route path="/knowledge" element={<KnowledgePage/>}/>
                     <Route path="/community" element={<CommunityPage/>}/>
                     <Route path="/contact" element={<ContactPage/>}/>
+                    <Route path="/projects/:id" element={<ProjectPage/>}/>
                     <Route path="*" element={<Navigate to="/"/>}/>
                 </Routes>
             </section>
