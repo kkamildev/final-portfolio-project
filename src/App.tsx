@@ -13,6 +13,7 @@ import ContactPage from "./pages/ContactPage";
 import CommunityPage from "./pages/CommunityPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ProjectPage from "./pages/ProjectPage";
+import StartScroll from "./utils/StartScroll";
 
 
 // TS types
@@ -28,6 +29,7 @@ const App : FC<Props> = ({}) => {
             <section className="w-112.5 h-screen bg-zinc-900 hidden lg:block">
             </section>
             <section id="scroll-container" className="w-full min-h-screen bg-zinc-900 py-25 lg:py-10 px-3 lg:px-10 overflow-y-scroll">
+                <StartScroll/>
                 <Routes>
                     <Route path="/" element={<AboutPage/>}/>
                     <Route path="/history" element={<HistoryPage/>}/>

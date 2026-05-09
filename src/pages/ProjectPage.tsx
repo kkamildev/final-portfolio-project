@@ -4,7 +4,7 @@ import { type Project } from "../utils/ProjectsData";
 
 // import modules
 import { useEffect, useState} from "react";
-import {useLocation, useNavigate, useParams } from "react-router-dom";
+import {useNavigate, useParams } from "react-router-dom";
 import SEO from "../utils/SEO";
 import ProjectsData from "../utils/ProjectsData";
 import PageTitle from "../components/PageTitle";
@@ -35,16 +35,6 @@ const ProjectPage : FC<Props> = ({}) => {
         }
     }, [id]);
 
-    const { pathname } = useLocation();
-
-    useEffect(() => {
-        const container = document.getElementById("scroll-container");
-        if (!container) return;
-
-        container.scrollTo(0, 0);
-
-        setTimeout(() => container.scrollTo(0, 0), 0);
-    }, [pathname]);
 
     return (
         <>
