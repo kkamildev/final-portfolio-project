@@ -32,7 +32,9 @@ const AboutSection : FC<Props> = ({title, description, margin = false, reversedF
             }
         })
 
-        observer.observe(ref.current);
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
     }, [])
 
     return(

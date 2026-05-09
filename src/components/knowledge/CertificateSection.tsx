@@ -31,7 +31,7 @@ const CertificateSection : FC<Props> = ({title, subtitle = "", earnedBy, learned
                 observer.disconnect();
             }
         })
-
+        if(ref.current)
         observer.observe(ref.current);
     }, [])
 

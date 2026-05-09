@@ -19,7 +19,7 @@ type Props = {
 }
 
 // main component
-const ProgrammingSection : FC<Props> = ({value, title, mainColorClass, shadowColorClass, examples}) => {
+const ProgrammingSection : FC<Props> = ({value = 0, title, mainColorClass, shadowColorClass, examples}) => {
 
     const [animationProgress, setAnimationProgress] = useState<number>(0);
     
@@ -41,7 +41,7 @@ const ProgrammingSection : FC<Props> = ({value, title, mainColorClass, shadowCol
                 setAnimationProgress(0);
             }
         })
-
+        if(ref.current)
         observer.observe(ref.current);
     }, [])
 

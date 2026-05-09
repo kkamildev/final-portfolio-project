@@ -39,7 +39,7 @@ const ProjectCard : FC<Props> = ({projectName, image, tags, tagsColors, simpleDe
                 observer.disconnect();
             }
         })
-
+        if(ref.current)
         observer.observe(ref.current);
     }, []);
 

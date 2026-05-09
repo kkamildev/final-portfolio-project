@@ -28,7 +28,7 @@ const HistoryPoint : FC<Props> = ({title, subtitle, description, className = "bg
                 observer.disconnect();
             }
         })
-
+        if(ref.current)
         observer.observe(ref.current);
     }, [])
 

@@ -29,7 +29,7 @@ const SoftSkillSection : FC<Props> = ({title, include}) => {
                 observer.disconnect();
             }
         })
-
+        if(ref.current)
         observer.observe(ref.current);
     }, [])
 

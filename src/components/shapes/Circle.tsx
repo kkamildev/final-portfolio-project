@@ -15,12 +15,14 @@ type Props = {
 // main component
 const Circle : FC<Props> = ({value = 100, backgroundColorClass = "bg-zinc-950", mainColorClass = "bg-green-500"}) => {
 
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const angle = (value / 100) * 360;
-    ref.current.style.mask = `conic-gradient(#000 ${angle}deg, transparent ${angle}deg)`;
-    ref.current.style.webkitMask = `conic-gradient(#000 ${angle}deg, transparent ${angle}deg)`;
+    if(ref.current) {
+      ref.current.style.mask = `conic-gradient(#000 ${angle}deg, transparent ${angle}deg)`;
+      ref.current.style.webkitMask = `conic-gradient(#000 ${angle}deg, transparent ${angle}deg)`;
+    }
   }, [value]);
 
   return (

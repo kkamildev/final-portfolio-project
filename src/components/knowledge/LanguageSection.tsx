@@ -27,7 +27,7 @@ const LanguageSection : FC<Props> = ({title, subtitle, image}) => {
                 observer.disconnect();
             }
         })
-
+        if(ref.current)
         observer.observe(ref.current);
     }, [])
 

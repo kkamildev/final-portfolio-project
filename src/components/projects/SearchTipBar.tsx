@@ -57,7 +57,7 @@ const SearchTipBar : FC<Props> = ({}) => {
                 )
             }
             {
-                ProjectsData().reduce((acc, project) => [...acc, ...project.tags], []).filter((tag) => tagsFilter(tag)).filter((item, index, arr) => arr.indexOf(item) === index).map((obj : string, index) =>
+                ProjectsData().reduce<string[]>((acc, project) => [...acc, ...project.tags], []).filter((tag) => tagsFilter(tag)).filter((item, index, arr) => arr.indexOf(item) === index).map((obj : string, index) =>
                     <li key={index} className="font-extrabold text-xl p-3 m-2 cursor-pointer hover:bg-zinc-900 transition-colors duration-100 ease-in-out rounded-xl" onClick={() => setSearchParams({search:"#" + obj})}>
                         #{obj}
                     </li>

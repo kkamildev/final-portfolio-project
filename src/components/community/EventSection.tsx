@@ -36,7 +36,7 @@ const EventSection : FC<Props> = ({title, subtitle, category, results, linkedinP
                 observer.disconnect();
             }
         })
-
+        if(ref.current)
         observer.observe(ref.current);
     }, [])
 

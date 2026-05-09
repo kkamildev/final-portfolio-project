@@ -34,6 +34,7 @@ const SocialSection : FC<Props> = ({title, description, icon, iconClassName = ""
             }
         })
 
+        if(ref.current)
         observer.observe(ref.current);
     }, [])
 
