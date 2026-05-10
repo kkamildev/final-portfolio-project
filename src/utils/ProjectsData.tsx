@@ -402,4 +402,4 @@ const ProjectsData = () : Project[] => {
 
 // export modules
 export default ProjectsData;
-export type {Project, ProjectSource}
+export type {Project, ProjectSource, TechnologyCard}

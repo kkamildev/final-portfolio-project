@@ -9,9 +9,9 @@ import SEO from "../utils/SEO";
 import ProjectsData from "../utils/ProjectsData";
 import PageTitle from "../components/PageTitle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import AnimatedBar from "../components/AnimatedBar";
+import ProjectTechnology from "../components/projects/ProjectTechnology";
 
 
 
@@ -63,17 +63,7 @@ const ProjectPage : FC<Props> = ({}) => {
                 </section>
                 <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-20 mb-10">
                     {
-                        project.technologies?.map((obj, index) => 
-                            <section key={index} className={`relative flex flex-col justify-start items-center shadow-md ${obj.shadowColor} rounded-lg p-5 hover:scale-105 transition-transform duration-75 ease-in-out`}>
-                                <h3 className="text-4xl font-bold mt-5 mb-10">{obj.title}</h3>
-                                <h2 className="text-2xl font-bold my-5">Role:</h2>
-                                <section className="flex justify-center">
-                                    <section className="flex flex-col justify-start items-start mb-5 gap-y-2">
-                                        {obj.points.map((obj, index) => <p className="font-bold text-zinc-600 flex items-center justify-between" key={index}><FontAwesomeIcon className="text-green-600 mx-3 scale-110" icon={faCircleCheck}/>{obj}</p>)}
-                                    </section>
-                                </section>
-                            </section>
-                        )
+                        project.technologies?.map((obj, index) => <ProjectTechnology obj={obj} index={index}/>)
                     }
                 </section>
                 <section className="my-10">
