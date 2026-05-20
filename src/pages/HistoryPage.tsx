@@ -4,13 +4,18 @@
 import {type FC } from "react";
 
 // import modules
+import { useRef } from "react";
 import PageTitle from "../components/PageTitle";
 import SEO from "../utils/SEO";
+import { useReactToPrint } from "react-to-print";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faPrint } from "@fortawesome/free-solid-svg-icons";
 
 // import assets
 
 import me from "../assets/me.jpg"
 import HistoryPoint from "../components/HistoryPoint";
+import Resume from "../components/Resume";
 
 // TS types
 type Props = {
@@ -19,6 +24,14 @@ type Props = {
 
 // main component
 const HistoryPage : FC<Props> = ({}) => {
+
+    const ResumeRef = useRef(null);
+
+    const printResume = useReactToPrint({
+        contentRef:ResumeRef,
+        documentTitle:"Kamil Kijak Resume"
+    });
+
     return(
         <>
             <SEO
@@ -117,6 +130,20 @@ const HistoryPage : FC<Props> = ({}) => {
                             className="bg-blue-800"
                         />
                     </aside>
+                </section>
+                <section className="my-10">
+                    <h1 className="text-3xl font-extrabold">My Resume</h1>
+                    <section className="h-2.5 bg-red-800 my-5 rounded-2xl w-1/2"></section>
+                </section>
+                <section className="flex flex-col md:flex-row justify-start gap-10">  
+                    <button onClick={printResume} className={`bg-red-800 p-2 hover:scale-105 text-white text-2xl font-bold cursor-pointer rounded-md transition-all duration-100 ease-in-out`}><FontAwesomeIcon icon={faPrint}/> Print Resume</button>
+                </section>
+                
+            </section>
+            {/* Component only prepared for print */}
+            <section className="hidden">
+                <section ref={ResumeRef}>
+                    <Resume/>
                 </section>
             </section>
         </>

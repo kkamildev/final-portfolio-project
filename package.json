@@ -21,6 +21,7 @@
     "react-dom": "^19.2.5",
     "react-helmet-async": "^3.0.0",
     "react-router-dom": "^7.14.2",
+    "react-to-print": "^3.3.0",
     "tailwindcss": "^4.2.4"
   },
   "devDependencies": {

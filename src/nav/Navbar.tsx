@@ -62,7 +62,7 @@ const Navbar : FC<Props> = ({}) => {
                             />
                             <NavButton
                                 title="My history"
-                                description="Learn history, work history, current workplace and learning path"
+                                description="Learn history, work history, current workplace, resume"
                                 icon={faBook}
                                 shadowColorDesc="shadow-orange-800/70"
                                 destination="/history"
