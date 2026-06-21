@@ -13,7 +13,7 @@ import pms1 from "../assets/projects/pms1.png"
 import pms2 from "../assets/projects/pms2.png"
 import pms3 from "../assets/projects/pms3.png"
 import portfolio1 from "../assets/projects/portfolio1.png"
-// import theTunnelnet1 from "../assets/projects/theTunnelnet1.png"
+import projectReppublic1 from "../assets/projects/projectRepublics1.png"
 
 // TS types
 
@@ -381,22 +381,51 @@ const ProjectsData = () : Project[] => {
             ],
             images:[]
         },
-        // {
-        //     name:"The Tunnelnet",
-        //     simpleDescription:"C# Roguelike game creating with monogame",
-        //     tags:[
-        //         "Game",
-        //         "C#",
-        //         "Monogame",
-        //     ],
-        //     tagsColors:[
-        //         "bg-orange-800",
-        //         "bg-cyan-500",
-        //         "bg-orange-600",
-        //     ],
-        //     image:theTunnelnet1,
-        //     completed:false
-        // }
+        {
+            name:"Project Republic",
+            simpleDescription:"C# 3d game in city-builder type",
+            tags:[
+                "Game",
+                "C#",
+                "Monogame",
+            ],
+            tagsColors:[
+                "bg-orange-800",
+                "bg-cyan-500",
+                "bg-orange-600",
+            ],
+            image:projectReppublic1,
+            completed:false,
+            technologies:[
+                {
+                    title:"C#",
+                    shadowColor:"shadow-sky-500",
+                    points:[
+                        "Main project language",
+                        "Logic creation",
+                        "Game behaviour"
+                    ]
+                },
+                {
+                    title:"Monogame",
+                    shadowColor:"shadow-orange-700",
+                    points:[
+                        "Game addons, input, functionality",
+                        "3d graphics"
+                    ]
+                },
+            ],
+            text:[
+                {
+                    title:"Project assumptions",
+                    barColor:"bg-red-800",
+                    content:
+                    <>
+                        I am creating this game for testing my programming skills and also just to make something creative like a game
+                    </>
+                },
+            ],
+        }
     ]
 }
 
