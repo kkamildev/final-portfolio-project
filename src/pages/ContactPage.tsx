@@ -49,7 +49,7 @@ const ContactPage : FC<Props> = ({}) => {
                     />
                     <SocialSection
                         title="Github"
-                        description="Developer account, Cctual projects, Projects database"
+                        description="Developer account, Actual projects, Projects database"
                         icon={faGithub}
                         iconClassName="text-pink-800"
                         className="shadow-pink-900"
