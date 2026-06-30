@@ -56,7 +56,7 @@ const Resume : FC<Props> = ({}) => {
                         <section className="flex flex-col items-start ml-5">
                             <ul className="mt-3 list-disc text-zinc-800 text-sm">
                                 <li>Web applications, websites creating</li>
-                                <li>Database, server management</li>
+                                <li>Database and server management</li>
                                 <li>Version controlling and configurating server</li>
                             </ul>
                         </section>
@@ -100,7 +100,7 @@ const Resume : FC<Props> = ({}) => {
                             <div className="w-2.5 h-2.5 bg-zinc-800 rounded-full"></div>
                             <section className="flex flex-col">
                                 <p className="text-sm font-bold">Technikum komunikacyjne nr 25, Kraków</p>
-                                <p className="text-sm">2023 - (expected gradulation June 2028)</p>
+                                <p className="text-sm">2023 - (expected graduation June 2028)</p>
                                 <p className="text-sm">Programming Technician</p>
                             </section>
                         </section>
@@ -162,7 +162,7 @@ const Resume : FC<Props> = ({}) => {
                                 <ul className="mt-2">
                                     <li className="text-sm"><span className="font-bold">-</span> Designed DBMS using MySQL</li>
                                     <li className="text-sm"><span className="font-bold">-</span> Created Node.js server with Express.js</li>
-                                    <li className="text-sm"><span className="font-bold">-</span> Created React app and integrated with backend</li>
+                                    <li className="text-sm"><span className="font-bold">-</span> Created React app and integrated it with backend</li>
                                     <li className="text-sm"><span className="font-bold">-</span> Deployed application on local hosting server</li>
                                 </ul>
                             </section>

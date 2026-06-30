@@ -123,7 +123,7 @@ const ProjectsData = () : Project[] => {
                     content:
                     <>
                         Project is a basic desktop game named "Minesweeper" - game about disarming mines.
-                        This is a copy of orginal classic game so it don't have anything special
+                        This is a copy of the orginal classic game, so it doesn't have anything special
                     </>
                 },
                 {
@@ -131,7 +131,7 @@ const ProjectsData = () : Project[] => {
                     barColor:"bg-green-800",
                     content:
                     <>
-                        This project was a school project for computer science subject. Main goal was create a some project using a C++ language.
+                        This project was a school project for the computer science subject. The Main goal was to create some project using the C++ language.
                         So I got an idea to make a simple game
                     </>
                 },
@@ -140,8 +140,8 @@ const ProjectsData = () : Project[] => {
                     barColor:"bg-cyan-800",
                     content:
                     <>
-                        Firstly I learn more C++ syntax and code, It was my first own project created using C++ language.
-                        Also I learn basics of CMake, because I had to make environment for project creation
+                        Firstly, I learned more C++ syntax and code. It was my first project created using the C++ language.
+                        Also, I learned the basics of CMake because I had to make an environment for project creation
                     </>
                 }
             ]
@@ -244,7 +244,7 @@ const ProjectsData = () : Project[] => {
                     barColor:"bg-red-800",
                     content:
                     <>
-                       Full-Stack project as property management system which includes: data management, users management, adding properties to lands. Project had to be in
+                       Full-stack project as a property management system, which includes data management, user management, and adding properties to lands. The Project had to be in
                        Polish language
                     </>
                 },
@@ -253,7 +253,7 @@ const ProjectsData = () : Project[] => {
                     barColor:"bg-green-800",
                     content:
                     <>
-                        This is project which I have to make for properties enterprise. This system is hosted on localy enterprise server
+                        This is a project that I have to make for the properties enterprise. This system is hosted a local enterprise server
                     </>
                 },
                 {
@@ -261,8 +261,8 @@ const ProjectsData = () : Project[] => {
                     barColor:"bg-purple-500",
                     content:
                     <>
-                        This project was a good challenge of web development skills, I also had limited time to complete it. Also new assumptions was told to me,
-                        so I had rebuild project again, create new sections or other things
+                        This project was a good challenge of web development skills; I also had limited time to complete it. Also, new assumptions were told to me,
+                        so I had to rebuild the project again, create new sections, or do other things
                     </>
                 },
                 {
@@ -270,7 +270,7 @@ const ProjectsData = () : Project[] => {
                     barColor:"bg-cyan-800",
                     content:
                     <>
-                        This project teached me mainly how react work, advanced state management also in backend creating better structure of project. I learned also basics of
+                        This project taught me mainly how React works, advanced state management, and the backend, creating a better structure of the project. I learned also the basics of
                         project deployment on real production
                     </>
                 }
@@ -359,7 +359,7 @@ const ProjectsData = () : Project[] => {
                     barColor:"bg-red-800",
                     content:
                     <>
-                        I created this project using front-end framework (react). This website is my portfolio which I will add my projects work, skills, certificates
+                        I created this project using the front-end framework (React). This website is my portfolio, which I will add my projects, work, skills, and certificates to
                     </>
                 },
                 {
@@ -367,7 +367,7 @@ const ProjectsData = () : Project[] => {
                     barColor:"bg-green-800",
                     content:
                     <>
-                        I wanted to create a final version of my portfolio site, I created few portfolio projects before but I wanted to create something better, more complex
+                        I wanted to create a final version of my portfolio site, I had created a few portfolio projects before, but I wanted to create something better, more complex
                     </>
                 },
                 {
@@ -375,7 +375,7 @@ const ProjectsData = () : Project[] => {
                     barColor:"bg-purple-500",
                     content:
                     <>
-                        This portfolio project will be upgraded by new content and also maybe new styles or animations
+                        This portfolio project will be upgraded with new content and also maybe new styles or animations
                     </>
                 }
             ],

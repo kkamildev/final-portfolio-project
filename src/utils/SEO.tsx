@@ -36,7 +36,7 @@ const SEO : FC<Props> = ({title, desc, url, img}) => {
         "@type": "WebSite",
         "url": canonical,
         "name": "Kkamildev portfolio website",
-        "description": "Portfolio site where you can find my knowledge, learning and work history, my projects, experience and organizations",
+        "description": "Portfolio site where you can find my knowledge, learning and work history, my projects, experience, and organizations",
         "publisher": {
             "@type": "Person",
             "name": "Kamil Kijak (Kkamildev)"
@@ -57,7 +57,7 @@ const SEO : FC<Props> = ({title, desc, url, img}) => {
 
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content={title} />
-            <meta name="twitter:description" content="Hi my name is Kamil Kijak, I am student of computer science. So let me introduce myself" />
+            <meta name="twitter:description" content="Hi, my name is Kamil Kijak. I am a student of computer science. So let me introduce myself" />
             <meta name="twitter:image" content={img} />
             <script type="application/ld+json">
                 {JSON.stringify(schema)}

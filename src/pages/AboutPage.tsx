@@ -41,7 +41,7 @@ const AboutPage : FC<Props> = ({}) => {
                 <ul className="text-white">
                     <AboutSection
                         title={<>My name is Kamil Kijak | <span className="text-red-800">Kkamildev</span></>}
-                        description={<>I am a computer science student from <span className="text-red-800">Poland near Kraków city</span>. I love work with computers and general IT sector. I am passionate about these with peaceful and quiet ambience around me. <span className="text-red-800">Kkamildev</span> is my nickname used for example in <span className="text-purple-800">Github</span></>}
+                        description={<>I am a computer science student from <span className="text-red-800">Poland near Kraków city</span>. I love working with computers and the general IT sector. Likewise, I am passionate about these with peaceful and quiet ambience around me. My nickname is <span className="text-red-800">Kkamildev</span> Kkamildev - I use it on <span className="text-purple-800">Github</span></>}
                         images={[me, polandFlag]}
                         alts={["photo of me", "Poland flag"]}
                         className="bg-red-800"
@@ -65,7 +65,7 @@ const AboutPage : FC<Props> = ({}) => {
                     </section>
                     <AboutSection
                         title={<>Let me talk about my <span className="text-red-800">Beginnings</span> in IT</>}
-                        description={<>So my beginnings are interesting they are have roots in childhood. First programming language which I have started is <span className="text-yellow-500">Python</span>, but also before I very liked commands in games or primitives like Scratch. I created few python basic games, but main progress was when I have applicated to <span className="text-red-800">technican high-school</span>. I have introduced to programming <span className="text-purple-700">websites, apps and server utilities</span></>}
+                        description={<>So my beginnings are interesting; they have roots in childhood. The first programming language that I have started is <span className="text-yellow-500">Python</span>, but also before I very liked commands in games or primitives like Scratch. I created a few basic Python games, but the main progress was when I applied to <span className="text-red-800">a technical high school</span>. I have been introduced to programming <span className="text-purple-700">websites, apps, and server utilities</span></>}
                         reversedFlex
                         images={[it, server]}
                         alts={["IT technology icon", "server icon"]}
@@ -90,7 +90,7 @@ const AboutPage : FC<Props> = ({}) => {
                     </section>
                     <AboutSection
                         title={<>So what is my current <span className="text-red-800">situation</span>?</>}
-                        description={<>I have huge contact with a lot of <span className="text-red-800">IT technologies</span> and also many of them know on good, also I practice new and improve my already known technologies. I also like to build <span className="text-green-700">projects</span> to show my skills and also test it to new technology environment. Now I am looking for <span className="text-yellow-500">intern or other kind of collaboration</span> to take a huge IT step</>}
+                        description={<>I have huge contact with a lot of <span className="text-red-800">IT technologies</span>, and also many of them I know well; also, I practice new and improve my already known technologies. I also like to build <span className="text-green-700">projects</span> to show my skills and also test them in a new technology environment. Now I am looking for <span className="text-yellow-500">an intern or other kind of collaboration</span> to take a huge IT step</>}
                         margin
                         reversedFlex
                         images={[questionMark, collaboration]}
@@ -116,7 +116,7 @@ const AboutPage : FC<Props> = ({}) => {
                     </section>
                     <AboutSection
                         title={<>Finally, <span className="text-red-800">my future</span> path in IT</>}
-                        description={<>I want in become a <span className="text-red-800">software-developer specialist</span>, collect more experience about IT brand and work to improve myself, build very good <span className="text-green-700">IT projects even prepared for production and deployment</span> to world as fully working software or service. I have many plans to become <span className="text-yellow-500">my IT path</span> very optimistic and good for me</>}
+                        description={<>I want to become a <span className="text-red-800">software-developer specialist</span>, collect more experience about IT brands and work to improve myself, build very good <span className="text-green-700">IT projects prepared for production and deployment</span> to the world as fully working software or service. I have many plans to make <span className="text-yellow-500">my IT path</span> very optimistic and good for me</>}
                         images={[bullseye, careerPath]}
                         alts={["bullseye icon", "career path icon"]}
                         className="bg-green-700"

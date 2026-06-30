@@ -72,11 +72,11 @@ const HistoryPage : FC<Props> = ({}) => {
                     </aside>
                     <aside className="flex-2 flex flex-col items-center">
                         <HistoryPoint
-                            title="High-School (Communication Technical School No. 25 in Kraków)"
+                            title="High School (Communication Technical School No. 25 in Kraków)"
                             subtitle="(September 2023 - expected graduation: April 2028)"
                             description={<>
-                                In this High-School I have learnt many basics about IT and also it have given me path<br/> for future Software-Developer career.
-                                I was feeling good in this chapter of my life, I have learnt so much and also made cool projects. Technologies which I have learnt: 
+                                In this High School I have learned many basics about IT, and it also have given me a path<br/> for a future software developer career.
+                                I was feeling good in this chapter of my life; I have learned so much and also made cool projects. Technologies that I have learned: 
                                 <span className="text-yellow-500"> MySQL, HTML, CSS, JS(Basics), React.js, PHP, Node.js, C#, Java(Basics)</span>
                             </>}
                             className="bg-yellow-500"
@@ -85,8 +85,8 @@ const HistoryPage : FC<Props> = ({}) => {
                             title="Plans for college"
                             subtitle="(Expected start: October 2028)"
                             description={<>
-                                I want go to college on <span className="text-orange-500">Computer Science field</span>, I want develop my potential in IT and also<span className="text-orange-500"> in Math (I love Math)</span>. I guess I know so much thinks but
-                                I want knowing more to be a specialist in this branch, to develop my greatness path. I hope everyting will be okay and I will be improving at college
+                                I want to go to college in the <span className="text-orange-500">Computer Science field</span>; I want to develop my potential in IT and also<span className="text-orange-500"> in math (I love math)</span>. I guess I know so much but
+                                I want to know more to be a specialist in this branch, to develop my greatness path. I hope everything will be okay, and I will be improving at college
                             </>}
                             className="bg-orange-500"
                         />
@@ -116,16 +116,16 @@ const HistoryPage : FC<Props> = ({}) => {
                             title="SKINVEST Specific-Task Contract"
                             subtitle="Making web full-stack property management system June - July 2025"
                             description={<>
-                               it was my first form of job, I had to create a <span className="text-green-700">full-stack system</span> to replace excel database because this was messy, so system was a good option to create <br />
-                                I used <span className="text-green-700">node.js with express, react.js, MySQL as database and tailwind for styles</span> to create it. This job have teached me new technologies and how to deploy a production versions
+                               It was my first form of job; I had to create a <span className="text-green-700">full-stack system</span> to replace the Excel database because this was messy, so the system was a good option to create <br />
+                                I used <span className="text-green-700">Node.js with Express, React.js, MySQL as a database and Tailwind for styles</span> to create it. This job has taught me new technologies and how to deploy production versions
                             </>}
                             className="bg-green-700"
                         />
                         <HistoryPoint
                             title="Looking for intern"
-                            subtitle="Looking for Software-Developer intern"
+                            subtitle="Looking for software developer intern"
                             description={<>
-                               I have been looking for <span className="text-blue-800">Software-Developer intern</span> to improve my skills, career and get important experience in this work field. Everyone must start from zero, so I really want to make the first step
+                               I have been looking for <span className="text-blue-800">software developer intern</span> to improve my skills and career and get important experience in this work field. Everyone must start from zero, so I really want to make the first step
                             </>}
                             className="bg-blue-800"
                         />
