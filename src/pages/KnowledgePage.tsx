@@ -137,8 +137,11 @@ const KnowledgePage : FC<Props> = ({}) => {
                     <h2 className="text-3xl font-extrabold">Backend</h2>
                 </section>
                 <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-20">
-                    <ProgrammingSection value={30} title="PHP" mainColorClass="bg-purple-800" shadowColorClass="shadow-purple-800"
-                        examples={["SQL connection", "Sessions/Cookies", "Simple language functions", "Request decontamination"]}
+                    <ProgrammingSection value={75} title="PHP" mainColorClass="bg-purple-800" shadowColorClass="shadow-purple-800"
+                        examples={["SQL connection", "Sessions/Cookies", "OOP", "Request decontamination"]}
+                    />
+                    <ProgrammingSection value={45} title="Laravel" mainColorClass="bg-red-600" shadowColorClass="shadow-red-600"
+                        examples={["Migrations", "CRUD", "Blade"]}
                     />
                     <ProgrammingSection value={80} title="Node.js" mainColorClass="bg-lime-600" shadowColorClass="shadow-lime-600"
                         examples={["HTTP server", "Dotenv", "WebSocket", "Sessions"]}

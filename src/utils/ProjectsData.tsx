@@ -13,6 +13,7 @@ import pms1 from "../assets/projects/pms1.png"
 import pms2 from "../assets/projects/pms2.png"
 import pms3 from "../assets/projects/pms3.png"
 import portfolio1 from "../assets/projects/portfolio1.png"
+import ecommerce1 from "../assets/projects/e-commerce1.png"
 
 // TS types
 
@@ -375,6 +376,139 @@ const ProjectsData = () : Project[] => {
                     content:
                     <>
                         This portfolio project will be upgraded with new content and also maybe new styles or animations
+                    </>
+                }
+            ],
+            images:[]
+        },
+        {
+            name:"E-commerce system",
+            simpleDescription:"Full-stack e-commerce system",
+            tags:[
+                "Full-Stack",
+                "Database System",
+                "MySql",
+                "React.js",
+                "Node.js",
+                "Tailwind",
+                "TypeScript"
+            ],
+            
+            tagsColors:[
+                "bg-cyan-700",
+                "bg-green-700",
+                "bg-orange-800",
+                "bg-sky-600",
+                "bg-lime-700",
+                "bg-blue-900",
+                "bg-blue-800"
+            ],
+            image:ecommerce1,
+            completed:false,
+
+            sources:[
+                {
+                    text:"Github",
+                    href:"https://github.com/kkamildev/e-commerce-system",
+                    buttonColor:"bg-pink-800 hover:bg-pink-700",
+                    icon:faGithub
+                }
+            ],
+            technologies:[
+                {
+                    title:"React",
+                    shadowColor:"shadow-sky-500",
+                    points:[
+                        "Front-end",
+                        "UI",
+                        "App interface"
+                    ]
+                },
+                {
+                    title:"TypeScript",
+                    shadowColor:"shadow-blue-700",
+                    points:[
+                        "Project general language",
+                        "Adding types to front-end models",
+                        "TS-sequelize"
+                    ]
+                },
+                {
+                    title:"Tailwind",
+                    shadowColor:"shadow-blue-800",
+                    points:[
+                        "Creating styles",
+                        "Creating animations",
+                        "App UI formatting"
+                    ]
+                },
+                {
+                    title:"Vite",
+                    shadowColor:"shadow-purple-800",
+                    points:[
+                        "Project management",
+                        "Project setup",
+                    ]
+                },
+                {
+                    title:"Node.js",
+                    shadowColor:"shadow-lime-600",
+                    points:[
+                        "Back-end",
+                        "Server logic",
+                        "Requests to database"
+                    ]
+                },
+                {
+                    title:"Express.js",
+                    shadowColor:"shadow-zinc-400",
+                    points:[
+                        "API creating",
+                        "Middlewares",
+                        "Creating request/response system"
+                    ]
+                },
+                {
+                    title:"MySql",
+                    shadowColor:"shadow-orange-600",
+                    points:[
+                        "Database creating",
+                        "Database general language",
+                    ]
+                },
+                {
+                    title:"Zustand",
+                    shadowColor:"shadow-stone-800",
+                    points:[
+                        "State managament",
+                        "Creating global stores"
+                    ]
+                },
+            ],
+            text:[
+                {
+                    title:"Project assumptions",
+                    barColor:"bg-red-800",
+                    content:
+                    <>
+                        Main assumptions was to create a full e-commerce system with admin panel to manage products and orders. Store can be configured fully by admin, admin can add specialist users,
+                        preapare products and their variants, can have full statistics about sales
+                    </>
+                },
+                {
+                    title:"Origin of project",
+                    barColor:"bg-green-800",
+                    content:
+                    <>
+                        I wanted to create this project to test my skills, unfortunately front-end is so hard for me in this project, so currently I have stopped creating project
+                    </>
+                },
+                {
+                    title:"Future",
+                    barColor:"bg-purple-500",
+                    content:
+                    <>
+                        Maybe I will return to creating this project, but now only backend is finished, frontend still is uncomplete
                     </>
                 }
             ],
